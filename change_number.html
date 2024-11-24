@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Counter</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .counter {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter" id="counter">0</div>
+    <button id="incrementButton">Click Me!</button>
+
+    <script>
+        const counterElement = document.getElementById('counter');
+        const incrementButton = document.getElementById('incrementButton');
+        
+        let count = 0;
+
+        incrementButton.addEventListener('click', () => {
+            count++;
+            counterElement.textContent = count;
+        });
+    </script>
+</body>
+</html>
